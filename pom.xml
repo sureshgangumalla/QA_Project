@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.quality.project</groupId>
+	<artifactId>Group3</artifactId>
+	<packaging>jar</packaging>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>Group3</name>
+
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>1.4.2.RELEASE</version>
+	</parent>
+
+	<dependencies>
+		<!--dependency> <groupId>com.microsoft.azure</groupId> <artifactId>azure-storage</artifactId> 
+			<version>5.0.0</version> </dependency -->
+
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-tomcat</artifactId>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>javax.mail</groupId>
+			<artifactId>mail</artifactId>
+			<version>1.4</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-mock</artifactId>
+			<version>2.0.8</version>
+			<scope>test</scope>
+		</dependency>
+
+
+
+		<dependency>
+			<groupId>org.apache.tomcat.embed</groupId>
+			<artifactId>tomcat-embed-jasper</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit-dep</artifactId>
+			<version>4.8.2</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-jdbc</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+		</dependency>
+	</dependencies>
+
+
+	<build>
+		<finalName>recipeApp</finalName>
+		<plugins>
+			<plugin>
+				<!-- Build an executable JAR -->
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<version>2.0.3.RELEASE</version>
+				<configuration>
+					<mainClass>com.quality.project.RecipeApp</mainClass>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+	<!-- build> <extensions> <extension> <groupId>org.apache.maven.wagon</groupId> 
+		<artifactId>wagon-ftp</artifactId> <version>1.0</version> </extension> </extensions> 
+		<plugins> <plugin> <groupId>org.apache.tomcat.maven</groupId> <artifactId>tomcat7-maven-plugin</artifactId> 
+		<version>2.2</version> <configuration> <port>8080</port> <path>/</path> </configuration> 
+		</plugin> <plugin> <artifactId>maven-compiler-plugin</artifactId> <configuration> 
+		<source>1.8</source> <target>1.8</target> </configuration> </plugin> <plugin> 
+		<groupId>org.codehaus.mojo</groupId> <artifactId>vfs-maven-plugin</artifactId> 
+		<version>1.0.1</version> <executions> <execution> <id>remove-old-root</id> 
+		<phase>install</phase> <goals> <goal>remove</goal> </goals> <configuration> 
+		<fileset> <sourceId>azure-hello-world</sourceId> <source>${azureFtpUrl}/webapps</source> 
+		</fileset> </configuration> </execution> </executions> </plugin> <plugin> 
+		<groupId>org.codehaus.mojo</groupId> <artifactId>wagon-maven-plugin</artifactId> 
+		<version>1.0</version> <executions> <execution> <id>upload-war</id> <phase>install</phase> 
+		<goals> <goal>upload-single</goal> </goals> <configuration> <fromFile>${basedir}/target/Group3-0.0.1-SNAPSHOT.war</fromFile> 
+		<url>${azureFtpUrl}</url> <toFile>webapps/ROOT.war</toFile> <serverId>azure-hello-world</serverId> 
+		</configuration> </execution> </executions> </plugins> </plugins> </build -->
+	<properties>
+		<java.version>1.8</java.version>
+	</properties>
+
+</project>
